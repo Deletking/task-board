@@ -1,5 +1,24 @@
 {
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Ir na academia.",
+      "isCompleted": false,
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Correr.",
+      "isCompleted": false,
+      "categoryId": "2"
+    },
+    {
+      "id": "3",
+      "title": "Comprar pão na padaria.",
+      "isCompleted": false,
+      "categoryId": "3"
+    }
+  ],
   "categories": [
     {
       "id": "1",

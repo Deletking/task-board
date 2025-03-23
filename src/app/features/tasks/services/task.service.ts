@@ -69,7 +69,7 @@ export class TaskService {
     this.tasks.update(tasks => tasks.filter(task => task.id !== taskId));
   }
 
-  private getSortedTasks(tasks: Task[]): Task[] {
+  getSortedTasks(tasks: Task[]): Task[] {
     return tasks.sort((a, b) => a.title.localeCompare(b.title));
   }
 }
