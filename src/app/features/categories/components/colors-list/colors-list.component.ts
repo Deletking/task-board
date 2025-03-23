@@ -7,7 +7,6 @@ const MODULES = [MatDividerModule];
 
 @Component({
   selector: 'app-colors-list',
-  standalone: true,
   imports: [...MODULES],
   template: `
     <section class="flex flex-col gap-4 w-full h-auto mb-4">

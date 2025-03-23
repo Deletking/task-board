@@ -5,7 +5,6 @@ import { MainListComponent } from '../../components/main-list/main-list.componen
 const COMPONENTS = [MainListComponent, ColorsListComponent];
 @Component({
   selector: 'app-category',
-  standalone: true,
   imports: [...COMPONENTS],
   template: `
     <div class="flex flex-col justify-between items-center h-full w-full">

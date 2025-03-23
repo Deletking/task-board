@@ -12,7 +12,6 @@ export class TaskService {
   private readonly apiUrl = environment.apiUrl;
 
   tasks = signal<Task[]>([]);
-
   numberOftasks = computed(() => this.tasks().length);
 
   getTasks(): Observable<Task[]> {
@@ -41,6 +40,7 @@ export class TaskService {
       updatedTasks
     );
   }
+
   upadteTaskIsCompleted(
     taskId: string,
     IsCompleted: boolean

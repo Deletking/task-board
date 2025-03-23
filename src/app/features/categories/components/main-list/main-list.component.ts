@@ -3,7 +3,6 @@ import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-main-list',
-  standalone: true,
   imports: [],
   template: `
     <section class="mt-16 mx-12 pl-8">

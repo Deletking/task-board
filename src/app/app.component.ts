@@ -6,7 +6,6 @@ import { ThemeService } from './shared/services/theme.service';
 const COMPONENTS = [ThemeToggleComponent, MainComponent];
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [...COMPONENTS],
   template: `
     <div class="relative min-h-screen w-full">
