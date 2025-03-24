@@ -1,7 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainComponent } from './layout/main/main.component';
 import { ThemeToggleComponent } from './shared/components/theme-toggle/theme-toggle.component';
-import { ThemeService } from './shared/services/theme.service';
 
 const COMPONENTS = [ThemeToggleComponent, MainComponent];
 @Component({
@@ -16,12 +15,4 @@ const COMPONENTS = [ThemeToggleComponent, MainComponent];
   `,
   styles: ``,
 })
-export class AppComponent implements OnInit {
-  private themeService = inject(ThemeService);
-
-  public ngOnInit(): void {
-    const currentColorTheme = this.themeService.getPreferredColorTheme();
-
-    this.themeService.setColorTheme(currentColorTheme);
-  }
-}
+export class AppComponent {}
