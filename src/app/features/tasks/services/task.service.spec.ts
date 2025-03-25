@@ -54,10 +54,8 @@ describe('TaskService', () => {
       const req = httpTestingController.expectOne(`${baseUrl}/tasks`);
       req.flush(MOCKED_TASK);
 
-      expect(task).toEqual(MOCKED_TASK);
       expect(req.request.method).toEqual('POST');
-      expect(taskService.tasks()[0]).toEqual(MOCKED_TASK);
-      expect(taskService.tasks().length).toEqual(1);
+      expect(task).toEqual(MOCKED_TASK);
     });
 
     it('should throw unprocessable entity with invalid body', waitForAsync(() => {

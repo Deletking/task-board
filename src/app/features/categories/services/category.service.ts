@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { environment } from '../../../../environments/environment.prod';
 import { Category } from '../models/category.model';
@@ -14,6 +14,8 @@ export class CategoryService {
   private readonly categories$ = this.httpClient.get<Category[]>(
     `${this.apiUrl}/categories`
   );
+
+  selectedCategoryId = signal<string>('1');
 
   categories = toSignal(this.categories$, { initialValue: [] as Category[] });
 }
