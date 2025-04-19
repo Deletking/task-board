@@ -11,6 +11,48 @@
       "title": "Fazer compras",
       "categoryId": "2",
       "isCompleted": false
+    },
+    {
+      "id": "3c44",
+      "title": "treinar",
+      "categoryId": "5",
+      "isCompleted": false
+    },
+    {
+      "id": "bf79",
+      "title": "treinar perna",
+      "categoryId": "5",
+      "isCompleted": false
+    },
+    {
+      "id": "7afd",
+      "title": "treinar perna",
+      "categoryId": "5",
+      "isCompleted": false
+    },
+    {
+      "id": "7f75",
+      "title": "teste",
+      "categoryId": "2",
+      "isCompleted": false
+    },
+    {
+      "id": "78e6",
+      "title": "TESTE",
+      "categoryId": "3",
+      "isCompleted": false
+    },
+    {
+      "id": "dbfc",
+      "title": "teste",
+      "categoryId": "2",
+      "isCompleted": false
+    },
+    {
+      "id": "d30a",
+      "title": "TESTE",
+      "categoryId": "2",
+      "isCompleted": false
     }
   ],
   "categories": [

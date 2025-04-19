@@ -13,6 +13,7 @@ export class TaskService {
 
   tasks = signal<Task[]>([]);
   numberOftasks = computed(() => this.tasks().length);
+  isLoadingTask = signal(false);
 
   getTasks(): Observable<Task[]> {
     return this.httpClient.get<Task[]>(`${this.apiUrl}/tasks`).pipe(
@@ -30,10 +31,11 @@ export class TaskService {
   }
 
   insertTaskInTheTaskList(newTask: Task): void {
-    const updatedTasks = [...this.tasks(), newTask];
-    const sortedTasks = this.getSortedTasks(updatedTasks);
+    this.tasks.update(task => {
+      const newTaskList = [...task, newTask];
 
-    this.tasks.set(sortedTasks);
+      return this.getSortedTasks(newTaskList);
+    });
   }
 
   updateTask(updatedTasks: Task): Observable<Task> {
