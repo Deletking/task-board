@@ -42,7 +42,7 @@ const COMMONS = [NgClass];
       class="flex flex-row gap-2 select-none"
       [formGroup]="newTaskForm">
       <mat-form-field class="w-full">
-        <mat-label>Task</mat-label>
+        <mat-label data-testid="titleLabel" for="title">Task</mat-label>
         <input
           formControlName="title"
           matInput
@@ -51,7 +51,9 @@ const COMMONS = [NgClass];
         <mat-hint class="text-tertiary">Press enter to add</mat-hint>
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Category</mat-label>
+        <mat-label data-testid="categoryIdLabel" for="categoryId"
+          >Category</mat-label
+        >
         <mat-select
           [disabled]="taskService.isLoadingTask()"
           formControlName="categoryId"
