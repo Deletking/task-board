@@ -43,7 +43,9 @@ const COMMONS = [NgClass];
       class="flex flex-row gap-2 select-none"
       [formGroup]="newTaskForm">
       <mat-form-field class="w-full">
-        <mat-label data-testid="titleLabel" for="title">Task teste</mat-label>
+        <mat-label data-testid="titleLabel" for="title"
+          >Task teste teste</mat-label
+        >
         <input
           formControlName="title"
           matInput
