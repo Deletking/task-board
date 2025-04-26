@@ -3,6 +3,7 @@ import {
   Component,
   computed,
   DestroyRef,
+  effect,
   inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -55,7 +56,6 @@ const COMMONS = [NgClass];
           >Category</mat-label
         >
         <mat-select
-          [disabled]="taskService.isLoadingTask()"
           formControlName="categoryId"
           (selectionChange)="onCategoryChange($event)"
           (keyup.enter)="onEnterToAddATask()">
@@ -93,8 +93,17 @@ export class IncludeTaskFormComponent {
     return this.taskService.isLoadingTask();
   });
 
+  constructor() {
+    effect(() => {
+      if (this.taskService.isLoadingTask()) {
+        this.newTaskForm.disable();
+      } else {
+        this.newTaskForm.enable();
+      }
+    });
+  }
+
   onEnterToAddATask(): void {
-    console.log(this.newTaskForm.value);
     if (this.newTaskForm.invalid) return;
 
     this.taskService.isLoadingTask.set(true);
