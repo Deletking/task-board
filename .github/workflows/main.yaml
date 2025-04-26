@@ -8,8 +8,8 @@ on:
 
 jobs:
   CI:
-    name: Continous Integration
-    runs-on: ubuntu-lastest
+    name: Continuous Integration
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -32,11 +32,11 @@ jobs:
         run: npm run build
 
   CD:
-    name: Continous Deployment
-    runs-on: ubuntu-lastest
+    name: Continuous Deployment
+    runs-on: ubuntu-latest
     needs: CI
     steps:
-      - uses: actions/checkou@v4
+      - uses: actions/checkout@v4
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
